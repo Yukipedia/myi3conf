@@ -72,7 +72,7 @@ changeAction()
 
 
 # kill script if exist.
-fehpids=$(ps -A | grep feh.sh | cut -d " " -f3)
+fehpids=$(ps -A | grep feh.sh)
 fehpidsarr=($(echo $fehpids | tr " " "\n"))
 
 for spid in "${fehpidsarr[@]}"
