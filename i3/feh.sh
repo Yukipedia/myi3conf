@@ -41,8 +41,6 @@ changeAction()
 
     IFS=' ' read -r -a rsarr <<< "$r"
 
-    echo "${rsarr[1]}"
-
     wallpapers=()
     for monitor in $( seq 0 $(($monitors - 1)))
     do
