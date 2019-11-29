@@ -122,6 +122,7 @@ set $ws10 "0: "
 workspace $ws10 output eDP-1
 
 assign [instance="vscodium"] $ws1
+assign [instance="code"] $ws1
 # assign [instance="xfce4-terminal"] $ws2
 assign [instance="google-chrome"] $ws3
 assign [instance="xfreerdp"] $ws9
