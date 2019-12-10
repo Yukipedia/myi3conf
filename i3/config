@@ -41,8 +41,9 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i" --term="i3-sensible-terminal"
+ bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="rofi -dmenu" --term="i3-sensible-terminal"
 # bindsym $mod+d exec rofi -show run
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu'
 
 # change focus
 bindsym $mod+h focus left
@@ -98,7 +99,7 @@ bindsym $mod+a focus parent
 
 # Display settings
 ## xrandr
-exec_always xrandr --output HDMI-1 --primary --auto --left-of eDP-1
+#exec_always xrandr --output HDMI-1 --primary --auto --left-of eDP-1
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -119,7 +120,7 @@ set $ws3 "3: "
 set $ws9 "9: "
 set $ws10 "0: "
 
-workspace $ws10 output eDP-1
+workspace $ws10 output eDP-1-1
 
 assign [instance="vscodium"] $ws1
 assign [instance="code"] $ws1
@@ -128,7 +129,7 @@ assign [instance="google-chrome"] $ws3
 assign [instance="xfreerdp"] $ws9
 assign [instance="vmware"] $ws9
 assign [instance="tim.exe"] $ws10
-assign [instance="tim.exe"] output eDP-1
+assign [instance="tim.exe"] output eDP-1-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
