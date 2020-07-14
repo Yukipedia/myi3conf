@@ -1,6 +1,4 @@
-#!/usr/bin/env sh
-
-## Add this to your wm startup file.
+#!/usr/bin/env bash
 
 # Terminate already running bar instances
 killall -q polybar
@@ -9,8 +7,10 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 for m in $(polybar --list-monitors | cut -d":" -f1); do
-    MONITOR=$m polybar -q --reload main -c ~/.config/polybar/config.ini &
+    MONITOR=$m polybar -q --reload example &
 done
 
 # Launch bar1 and bar2
-#polybar main -c ~/.config/polybar/config.ini &
+# polybar built-in&
+
+# echo "Bars launched..."
