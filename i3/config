@@ -123,7 +123,7 @@ set $ws10 "10"
 #set $ws9 "9: "
 #set $ws10 "0: "
 
-workspace $ws10 output eDP1
+workspace $ws9 output eDP1
 
 assign [instance="vscodium"] $ws1
 assign [instance="code"] $ws1
@@ -224,11 +224,11 @@ gaps outer 5
 # Background
 exec_always --no-startup-id $HOME/.config/i3/feh.sh
 # NetworkManager
-exec --no-startup-id $HOME/.config/i3/network.sh
+# exec --no-startup-id $HOME/.config/i3/network.sh
 # Picom
 exec --no-startup-id picom
 # Vbox
-# exec $HOME/.config/i3/vbox.sh
+# exec --no-startup-id i3-msg 'workspace 9; exec $HOME/.config/i3/vbox.sh'
 
 exec timedatectl set-timezone Asia/Shanghai
 exec timedatectl set-local-rtc 1
