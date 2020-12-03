@@ -127,12 +127,13 @@ workspace $ws9 output eDP1
 
 assign [instance="vscodium"] $ws1
 assign [instance="code"] $ws1
+assign [class="jetbrains-*"] $ws1
 # assign [instance="xfce4-terminal"] $ws2
 assign [instance="google-chrome"] $ws3
 # assign [instance="xfreerdp"] $ws9
 assign [instance="vmware"] $ws9
 assign [instance="VirtualBox Manager"] $ws9
-assign [instance="VirtualBox Machine"] $ws9
+assign [class="VirtualBox Machine"] $ws9
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -221,6 +222,8 @@ bindsym $mod+Shift+f exec flameshot gui
 gaps inner 10
 gaps outer 5
 
+# Synergy
+exec --no-startup-id synergy
 # Background
 exec_always --no-startup-id $HOME/.config/i3/feh.sh
 # Picom
