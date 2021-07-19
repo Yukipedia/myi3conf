@@ -68,6 +68,7 @@ changeAction()
     done
 
     eval $fehCMD
+    echo "$fehCMD"
 }
 
 

@@ -14,7 +14,7 @@ for m in "${monitors[@]}"; do
 	echo "$m"
 	export MONITOR=$m
 	export TRAY_POSITION=none
-	if [[ "$m" == "HDMI1" ]] && [[ "${#monitors[@]}" != "1" ]]; then
+	if [[ "$m" == "HDMI-1" ]] && [[ "${#monitors[@]}" != "1" ]]; then
 		TRAY_POSITION=right
 	fi
 	# If only one monitor
